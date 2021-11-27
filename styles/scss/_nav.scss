@@ -1,0 +1,123 @@
+.nav{
+  background-color: $White;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  padding: .5rem 0rem 1rem;
+  font-family: "Open Sans", sans-serif;
+  .container{
+    position: relative;
+    height: 100%;
+    .toggle{
+      cursor: pointer;
+      width: 25px;
+      height: 20px;
+
+      .icon1{
+        background: url(../../images/icon-hamburger.svg) no-repeat;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .icon2{
+        background: url(../../images/icon-close.svg) no-repeat;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      
+
+    }
+
+    .navigation{
+      position: absolute;
+      top: 4rem;
+      padding: 1.5rem 1rem;
+      background-color: $White;
+      width: 95%;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: -4px -20px 50px -9px $Dark-Blue,
+                  -1px 123px 238px -7px $Dark-Blue;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+
+      
+
+      @include breakpoint(md){
+        display: block;
+        position: relative;
+        box-shadow: none;
+        background-color: transparent;
+        width: auto;
+        top: .5rem;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      li{
+        text-align: center;
+        margin-bottom: .7rem;
+        &:last-child{
+          margin-bottom: 0rem;
+        }
+
+      @include breakpoint(md){
+        margin: 0rem .8rem;
+      }
+        
+        a{
+          position: relative;
+          text-decoration: none;
+          color: $Dark-Blue;
+
+          @include breakpoint(md){
+            &:hover{
+              font-weight: 700;
+  
+              &:before{
+                content: "";
+    
+                  position: absolute;
+                  height: 3px;
+                  width: 100%;
+                  background: linear-gradient(to right, $Lime-Green,$Bright-Cyan
+                  );
+                  bottom: -26px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header-reqInvite{
+      display: inline-block;
+      border-radius: 50px;
+      padding: .5rem 1.3rem;
+      color: $White;
+      background: linear-gradient(to right, $Lime-Green,$Bright-Cyan);
+      font-weight: 600;
+      font-size: 0.8rem;
+
+      &:hover{
+        opacity: .8;
+      }
+
+
+      @include breakpoint(lg){
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+}

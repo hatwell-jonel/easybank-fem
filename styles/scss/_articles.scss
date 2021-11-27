@@ -1,0 +1,54 @@
+.articles{
+  font-family: "Open Sans", sans-serif;
+  background-color: $Very-Light-Gray;
+
+  .container{
+    text-align: center;
+    h2{
+      font-size: 2rem;
+      color: $Dark-Blue;
+    }
+
+    .boxes{
+
+      @include breakpoint(md){
+        display: grid;
+        grid-template-columns: repeat(2,1fr );
+        grid-gap: 1rem;
+      }
+
+      @include breakpoint(lg){
+        display: grid;
+        grid-template-columns: repeat(4 ,1fr );
+      }
+      .box{
+        border-radius: 5px;
+        background-color: $White;
+        img{
+          border-radius: 3px;
+          width: 100%;
+          height: 11rem;
+        }
+
+        &__text{
+          text-align: left;
+
+          .author{
+            color: $Grayish-Blue;
+            font-size: 0.6rem;
+          } 
+
+          .title{
+            color: $Dark-Blue;
+            font-size: 1.125rem
+          }
+
+          .details{
+            color: $Grayish-Blue;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

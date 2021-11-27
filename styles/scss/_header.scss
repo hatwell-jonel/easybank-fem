@@ -1,0 +1,112 @@
+.header{
+  position: relative;
+  background-color: $Very-Light-Gray;
+  font-family: "Open Sans", sans-serif;
+  &::before{
+    content: "";
+    display: block;
+    height: 51px;
+  }
+  .container{
+    padding-bottom: 5rem;
+
+    @include breakpoint(md){
+      padding-bottom: 0rem;
+    }
+
+    .image{
+      position: absolute;
+      width: 100%;
+      right: 0;
+      left: 0;
+      background: url(../../images/bg-intro-mobile.svg) no-repeat;
+      height: 350px;
+      width: 100%;
+      background-size: 100% 100%;
+
+      @include breakpoint(md){
+      position: relative;
+      width:100%;
+      background: url(../../images/bg-intro-desktop.svg) no-repeat;
+      background-position: 10% 50%;
+      height: 22em;
+      left: 9.3rem;
+      right: 0;
+      }
+
+      @include breakpoint(lg){
+        height: 30em;
+      }
+  
+
+      img{
+        position: relative;
+        top: -5.5rem;
+        max-height: 386px;
+        width: 100%;
+
+
+      @include breakpoint(md){
+        max-height: 550px;
+      }
+
+      @include breakpoint(lg){
+        max-height: 670px;
+      }
+      }  
+    }
+
+    .text{
+      text-align: center;
+      padding-top:  20rem;
+
+      @include breakpoint(md){
+        padding-top:  0rem;
+        width: 70%;
+        text-align: left;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      h1{
+        color: $Dark-Blue;
+        font-size: 2rem;
+
+        @include breakpoint(md){
+     
+          font-size: 2.3rem;
+  
+        }
+
+         @include breakpoint(lg){
+     
+          font-size: 2.7rem;
+  
+        }
+      }
+      p{
+        color: $Grayish-Blue;
+      }
+
+      .header-reqInvite{
+        display: inline-block;
+        border-radius: 50px;
+        padding: .5rem 1.3rem;
+        color: $White;
+        background: linear-gradient(to right, $Lime-Green,$Bright-Cyan);
+        font-weight: 600;
+
+        &:hover{
+          opacity: .8;
+        }
+
+        @include breakpoint(lg){
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
